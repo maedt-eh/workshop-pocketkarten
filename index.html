@@ -1,42 +1,70 @@
-<section class="hero">
-  <h1>Workshop Pocketkarten</h1>
-  <p class="author">Von Matteo &amp; [Name deiner Freundin]</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Pocketkarten</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <p>
-    Diese Seite begleitet den Workshop und fasst die wichtigsten Inhalte
-    übersichtlich zusammen.
-  </p>
-</section>
+<body>
+  <main class="page">
 
-<section class="posts">
+    <section class="hero">
+      <p class="eyebrow">Workshop Pocketkarten</p>
+      <h1>Aktivierende Postenarbeit</h1>
+      <p class="author">Erstellt von Matteo &amp; lililiLana</p>
 
-  <details class="post-card">
-    <summary>Posten 1: Bewegung inkl. Körperwahrnehmung</summary>
-
-    <div class="post-content">
-      <h3>Durchführung</h3>
-      <p>
-        Aufrecht hinstellen, Füsse hüftbreit auseinander, Augen schliessen:
-        Wo spürst du Anspannung? Wie ist deine Stimmung gerade?
+      <p class="intro">
+        Diese Website begleitet den Workshop und fasst die wichtigsten Posten,
+        Übungen und Reflexionsfragen übersichtlich zusammen.
       </p>
+    </section>
 
-      <h3>Bewegungssequenz</h3>
-      <ul>
-        <li>Schultern kreisen: 5–10x vorwärts und rückwärts.</li>
-        <li>Spüre bewusst nach: Gibt es Spannung in den Schultern?</li>
-        <li>Atme ruhig weiter und achte auf deinen Körper.</li>
-      </ul>
-    </div>
-  </details>
+    <section class="cards">
 
-  <details class="post-card">
-    <summary>Posten 2: Kommunikation</summary>
+      <article class="accordion">
+        <button class="accordion-header">
+          <span>Posten 1: Bewegung inkl. Körperwahrnehmung</span>
+          <span class="icon">+</span>
+        </button>
 
-    <div class="post-content">
-      <p>
-        Hier kommt später die Erklärung zu Posten 2 rein.
-      </p>
-    </div>
-  </details>
+        <div class="accordion-content">
+          <div class="inner">
+            <h3>Durchführung</h3>
+            <p>
+              Aufrecht hinstellen, Füsse hüftbreit auseinander, Augen schliessen:
+              Wo spürst du Anspannung? Wie ist deine Stimmung gerade?
+            </p>
 
-</section>
+            <h3>Bewegungssequenz</h3>
+            <ul>
+              <li>Schultern kreisen: 5–10x vorwärts und rückwärts.</li>
+              <li>Bewusst nachspüren: Spürst du Spannung in den Schultern?</li>
+              <li>Ruhig weiteratmen und die Körperwahrnehmung beobachten.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="accordion">
+        <button class="accordion-header">
+          <span>Posten 2: Kommunikation</span>
+          <span class="icon">+</span>
+        </button>
+
+        <div class="accordion-content">
+          <div class="inner">
+            <p>
+              Hier kommt später der Inhalt zum zweiten Posten hin.
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
