@@ -1,18 +1,38 @@
-const accordions = document.querySelectorAll(".accordion");
+function initAccordion(blockClass, headerClass, contentClass) {
+  const blocks = document.querySelectorAll(blockClass);
 
-accordions.forEach((accordion) => {
-  const header = accordion.querySelector(".accordion-header");
-  const content = accordion.querySelector(".accordion-content");
+  blocks.forEach((block) => {
+    const header = block.querySelector(headerClass);
+    const content = block.querySelector(contentClass);
 
-  header.addEventListener("click", () => {
-    const isOpen = accordion.classList.contains("active");
+    if (!header || !content) return;
 
-    accordion.classList.toggle("active");
+    header.addEventListener("click", () => {
+      const isOpen = block.classList.contains("active");
 
-    if (isOpen) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+      block.classList.toggle("active");
+
+      if (isOpen) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+
+      updateParentHeights(block);
+    });
   });
-});
+}
+
+function updateParentHeights(block) {
+  const parentBlock = block.closest(".block1.active");
+
+  if (!parentBlock) return;
+
+  const parentContent = parentBlock.querySelector(".block1-content");
+
+  parentContent.style.maxHeight =
+    parentContent.scrollHeight + 300 + "px";
+}
+
+initAccordion(".block1", ".block1-header", ".block1-content");
+initAccordion(".block2", ".block2-header", ".block2-content");
